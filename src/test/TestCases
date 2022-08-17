@@ -1,0 +1,50 @@
+https://www.nyrr.org/
+
+TC1 Marathon countdown verification
+STR
+1. Open home page and click TCS NYC Marathon tab at the page header
+2. In the ‘Marathon day’ box verify that:
+ER:
+1. Days countdown are correctly displayed ( correct value = value in the box - current day)
+2. Hours are counted correctly ( correct value = 12 am - current hour)
+
+
+
+TC2 Marathon results finish time should be shown in ascending order
+STR
+1. Open home page and click TCS NYC Marathon tab at the page header
+2. Click on Results drop down
+3. Click on Race results
+4. Click on ‘2021 official results'
+ER:
+Displayed finish time is sorted in ascending order
+
+
+TC3 51 Result is shown on first load of Marathon results
+STR
+1. Open home page and click TCS NYC Marathon tab at the page header
+2. Click on Results drop down
+3. Click on Race results
+4. Click on ‘2021’ official results
+ER:
+51 result is displayed
+
+
+TC4 Verify ‘More info’ details of a race
+TODO
+STR
+1. Open home page and click ‘Calendar’
+2. Under ‘Featured races’ click on ‘More Info’ of the 4th race (the one which is on the right side of the page)
+ER:
+1. Date, Location, Distance, Hashtag information is present
+2. Register now button is available
+
+
+TC5 Verify Registration open dates  for November training
+STR
+1. Open home page and select ‘Group Training’ in ‘Train’ drop down
+2. Click on ’Session dates’ menu
+ER:
+1. Registration date for November 15- December 22 training  should be Oct 25
+2. Oct 25 is shown in 'Registration date' column
+
