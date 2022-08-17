@@ -17,7 +17,7 @@ STR
 3. Click on Race results
 4. Click on ‘2021 official results'
 ER:
-Displayed finish time is sorted in ascending order
+Displayed place is sorted in ascending order
 
 
 TC3 51 Result is shown on first load of Marathon results
@@ -36,8 +36,11 @@ STR
 1. Open home page and click ‘Calendar’
 2. Under ‘Featured races’ click on ‘More Info’ of the 4th race (the one which is on the right side of the page)
 ER:
-1. Date, Location, Distance, Hashtag information is present
-2. Register now button is available
+1. Date is the same as on 'Calendar' page
+2. Location is not empty
+3. Distance has miles or kilometres text
+4. Hashtag information is not empty
+5. Register now button is available
 
 
 TC5 Verify Registration open dates  for November training
