@@ -1,0 +1,34 @@
+#Home Page
+homePage.headerLink.TCSMarathon ='.//li//a[@href='/tcsnycmarathon']'
+homePage.headerLink.calendar = './/a[@href='/run/race-calendar'][2]'
+homePage.headerLink.train = './/*[@data-currentnav-regex='/train']'
+homePage.dropDownSelection.groupTraining'.//a[@href='/train/classes/grouptraining']'
+
+
+#Marathon Page
+marathonPage.dropDown.results ='.//li[@data-dropdown-id='header_dropdown0'][5]//a[@href='#']'
+marathonPage.dropDownValue.raceResults='.//li//a[@href='/tcsnycmarathon/results/race-results']'
+marathonPage.box.countDownInfo ='.//*[@data-behavior='Countdown']'
+marathonPage.countDown.days ='.//*[@data-countdown-days]'
+marathonPage.countDown.hours = './/*[@data-countdown-hours]'
+
+#Results page
+resultsPage.link.2021Results = './/a[@href='https://results.nyrr.org/event/M2021/finishers]'
+TODO
+resultsPage.text.place = './/span[text()='Place']/span[text()=1]' || './/span[text()='Place']//span[@class='num ng-binding']'
+
+#CalendarPage
+calendarPage.button.moreInfoOfRightMostRace = './/div[@class='card_group_full__item'][4]//span[@class='btn__inner']'
+calendarPage.button.dateOfRightMostRace = './/div[@class='card_group_full__item'][4]//div[@class='card__desc']'
+
+
+#Race Details Page
+raceDetailsPage.text.date = './/li[1]//*[@class='race_detail-meta_list__value']'
+raceDetailsPage.text.location = './/li[2]//*[@class='race_detail-meta_list__value']'
+raceDetailsPage.text.distance = './/li[3]//*[@class='race_detail-meta_list__value']'
+raceDetailsPage.text.hashtag = './/*[@class='race_detail-meta_list__value hashtag_value_size']'
+raceDetailsPage.button.register = './/*[@id='registerButton']'
+
+#Group Training Page
+groupTrainingPage.text.sessionDetails = './/article[@class='intro_with_media'][1]//div[1]//div[@class='story_detail_accordion'][3]'
+groupTrainigPage.text.dateForNovDecTraining = './/table[@class='table']//tr[.//td[contains(text(), 'Nov. 15–Dec. 22')]]//td[2]'
