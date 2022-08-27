@@ -8,9 +8,6 @@ import java.text.ParseException;
 
 public class MarathonCountDownTest extends BaseTest {
     WebDriver webDriver;
-
-//    TODO public MarathonCountDownTest(WebDriver webDriver) {
-//        super (webDriver);
 //    }
 
     @Test
