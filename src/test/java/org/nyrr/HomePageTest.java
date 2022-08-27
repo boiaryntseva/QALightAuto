@@ -9,6 +9,9 @@ public class HomePageTest extends BaseTest{
 
 @Test
     public void openHomePage(){
-    homePage.openHomepage();
+    homePage
+            .openHomepage()
+            .clickOnMarathonLink();
+
 }
 }

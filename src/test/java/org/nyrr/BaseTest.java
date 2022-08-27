@@ -5,19 +5,19 @@ import static org.junit.Assert.assertTrue;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Test;
 import org.nyrr.pages.HomePage;
+import org.nyrr.pages.MarathonPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.time.Duration;
+import java.time.temporal.ChronoUnit;
 import java.util.concurrent.TimeUnit;
 
-/**
- * Unit test for simple App.
- */
 public class BaseTest {
     protected WebDriver webDriver;
     protected HomePage homePage;
+    protected MarathonPage marathonPage;
 
     /**
      * Rigorous Test :-)
@@ -27,8 +27,9 @@ public class BaseTest {
         WebDriverManager.chromedriver().setup();
         webDriver = new ChromeDriver();
         webDriver.manage().window().maximize();
-        webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         homePage = new HomePage(webDriver);
+        marathonPage = new MarathonPage(webDriver);
 
     }
 
