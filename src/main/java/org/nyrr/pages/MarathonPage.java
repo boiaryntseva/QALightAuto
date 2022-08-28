@@ -15,13 +15,13 @@ public class MarathonPage extends ParentPage {
     public MarathonPage(WebDriver webDriver) {
         super(webDriver);
     }
+
     @FindBy(xpath = ".//*[@data-countdown-days]")
     private WebElement daysCountdown;
 
     public void checkMarathonCountDownDays() throws ParseException {
         String actualDaysCount = daysCountdown.getText().trim();
         // System.out.println(actualDaysCount);
-
         try {
             LocalDate todaysDate = LocalDate.now();
             LocalDate marathonDate = LocalDate.parse("2022-11-06");
@@ -31,7 +31,7 @@ public class MarathonPage extends ParentPage {
             //    System.out.println(todaysDate);
             Assert.assertEquals(actualDaysCount, expectedDaysTillMarathon);
             logger.info(String.format("Expected days till marathon %s , displayed value " +
-                    "is %s", expectedDaysTillMarathon, actualDaysCount) );
+                    "is %s", expectedDaysTillMarathon, actualDaysCount));
 
         } catch (Exception e) {
             e.printStackTrace();

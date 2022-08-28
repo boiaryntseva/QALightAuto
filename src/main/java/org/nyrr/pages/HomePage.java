@@ -31,9 +31,10 @@ public class HomePage extends ParentPage{
         return this;
     }
 
-    public MarathonPage clickOnMarathonLink(){
-        marathonLink.click();
-        logger.info("Marathon link was clicked");
+    public MarathonPage clickOnMarathonLink( WebElement marathonLink){
+//        marathonLink.click();
+//        logger.info("Marathon link was clicked");
+        clickOnElement(marathonLink);
         return new MarathonPage(webDriver);
 
     }
