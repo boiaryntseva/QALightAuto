@@ -19,9 +19,7 @@ public class BaseTest {
     protected HomePage homePage;
     protected MarathonPage marathonPage;
 
-    /**
-     * Rigorous Test :-)
-     */
+
     @Before
     public void openUrl() {
         WebDriverManager.chromedriver().setup();

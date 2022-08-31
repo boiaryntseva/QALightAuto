@@ -11,7 +11,9 @@ public class MarathonCountDownTest extends BaseTest {
 
     @Test
     public void checkMarathonCountDownDays() throws ParseException {
-        homePage.openHomepage().clickOnMarathonLink(homePage.marathonLink)
+        homePage
+                .openHomepage()
+                .clickOnMarathonLink(homePage.marathonLink)
                 .checkMarathonCountDownDays();
     }
 }

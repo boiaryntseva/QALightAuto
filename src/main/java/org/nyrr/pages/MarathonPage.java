@@ -1,7 +1,6 @@
 package org.nyrr.pages;
 
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,6 +17,21 @@ public class MarathonPage extends ParentPage {
 
     @FindBy(xpath = ".//*[@data-countdown-days]")
     private WebElement daysCountdown;
+
+    @FindBy(xpath = ".//li[@data-dropdown-id='header_dropdown0'][5]//a[@href='#']")
+    public WebElement resultsLink;
+
+    @FindBy(xpath = ".//li//a[@href='/tcsnycmarathon/results/race-results']")
+    public WebElement raceResultsLink;
+
+
+    @FindBy(xpath = " .//a[@href='https://results.nyrr.org/event/M2021/finishers']")
+    //@FindBy(xpath = ".//section[@class='story_detail__text story_detail__text--with_title']//ul[1]//li[1]")
+    public WebElement year2021Results;
+
+    //@FindBy(xpath = ".//div[@class='cookies__inner']")
+    @FindBy(xpath = ".//a[@href='javascript:void(0);']")
+    public WebElement acceptCookies;
 
     public void checkMarathonCountDownDays() throws ParseException {
         String actualDaysCount = daysCountdown.getText().trim();
@@ -37,6 +51,20 @@ public class MarathonPage extends ParentPage {
             e.printStackTrace();
         }
 
+    }
 
+    public MarathonResultsPage open2021MarathonResults() {
+        //TODO add wait before cookies
+        clickOnElement(resultsLink);
+        clickOnElement(raceResultsLink);
+//        WebDriverWait webDriverWait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
+//        webDriverWait.until(ExpectedConditions.elementToBeClickable(year2021Results));//       Thread.sleep(5000);
+//        Actions actions = new Actions(webDriver);
+//        actions.moveToElement(year2021Results);
+//        actions.click(year2021Results).build().perform();
+        clickOnElement(acceptCookies);
+        clickOnElement(year2021Results);
+
+        return new MarathonResultsPage(webDriver);
     }
 }
