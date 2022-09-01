@@ -1,8 +1,11 @@
 package org.nyrr.pages;
 
+import libs.TestData;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 
@@ -16,6 +19,9 @@ public class MarathonResultsPage extends ParentPage {
 
     @FindBys(@FindBy(xpath = ".//span[text()='Place']//span[@class='num ng-binding']"))
     List<WebElement> placeNumberList;
+
+    @FindAll(@FindBy(xpath = ".//*[@class='container-fluid b-runners_detailes-list']"))
+    List<WebElement> resultRowList;
 
 
     public void checkResultsSortingByPlace() {
@@ -42,5 +48,12 @@ public class MarathonResultsPage extends ParentPage {
             logger.info("Places are NOT sorted" + e);
         }
 
+    }
+
+    public void checkNumberOfResultsShown() {
+        int actualResultRow = resultRowList.size();
+        Assert.assertEquals("Result rows are mismatched", TestData.COUNT_OF_RESULT_ROWS, actualResultRow);
+        logger.info("Actual result rows is equal to " + actualResultRow +
+                "and expected is " + TestData.COUNT_OF_RESULT_ROWS);
     }
 }

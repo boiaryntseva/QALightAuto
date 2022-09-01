@@ -15,4 +15,12 @@ public class MarathonResultsTest extends BaseTest {
                 .open2021MarathonResults()
                 .checkResultsSortingByPlace();
     }
+
+    @Test
+    public void marathonResultsShouldShow51Result() {
+        homePage.openHomepage()
+                .clickOnMarathonLink(homePage.marathonLink)
+                .open2021MarathonResults()
+                .checkNumberOfResultsShown();
+    }
 }
