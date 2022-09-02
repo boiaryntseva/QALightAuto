@@ -12,6 +12,7 @@ public class RaceDetailsTest extends BaseTest{
 
         homePage
                 .openHomepage()
-                .clickOnCalendarLink();
+                .clickOnCalendarLink()
+                .clickOnMoreInfoLinkOfRightmostRace();
     }
 }
