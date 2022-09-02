@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.text.ParseException;
 import java.time.LocalDate;
@@ -34,6 +35,7 @@ public class MarathonPage extends ParentPage {
     private WebElement acceptCookies;
 
     public void checkMarathonCountDownDays() throws ParseException {
+        webDriverWait.until(ExpectedConditions.visibilityOf(daysCountdown));
         String actualDaysCount = daysCountdown.getText().trim();
         // System.out.println(actualDaysCount);
         try {

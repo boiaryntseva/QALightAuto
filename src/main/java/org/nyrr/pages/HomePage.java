@@ -3,10 +3,6 @@ package org.nyrr.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class HomePage extends ParentPage {
     public HomePage(WebDriver webDriver) {
@@ -43,7 +39,7 @@ public class HomePage extends ParentPage {
 
     }
 
-    public GroupTrainingPage clickOnGroupTraining() {
+    public GroupTrainingPage openGroupTrainingThroughTrainingTab() {
         trainingLink.click();
         groupTrainingLink.click();
 //        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));

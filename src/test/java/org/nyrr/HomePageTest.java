@@ -5,7 +5,6 @@ import org.nyrr.pages.HomePage;
 import org.openqa.selenium.WebDriver;
 
 public class HomePageTest extends BaseTest{
-    WebDriver driver;
 
 @Test
     public void openHomePage(){

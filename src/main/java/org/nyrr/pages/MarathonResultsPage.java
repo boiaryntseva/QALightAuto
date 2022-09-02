@@ -41,13 +41,8 @@ public class MarathonResultsPage extends ParentPage {
 //            sortedListExpectedInt.add(Integer.parseInt(e));
 //        }
 //        Collections.sort(sortedListExpectedInt);
-        try {
-            Assert.assertEquals(sortedExpectedList, originalList);
+            Assert.assertEquals("Places are not sorted", sortedExpectedList, originalList);
             logger.info("Places are sorted");
-        } catch (Exception e) {
-            logger.info("Places are NOT sorted" + e);
-        }
-
     }
 
     public void checkNumberOfResultsShown() {

@@ -6,4 +6,9 @@ public class RacePage extends ParentPage{
     public RacePage(WebDriver webDriver) {
         super(webDriver);
     }
+
+
+    public void verifyRaceDate(){
+
+    }
 }
