@@ -11,7 +11,7 @@ public class MarathonResultsTest extends BaseTest {
 
     public void marathonResultsShouldBeShownInAscendingOrder() {
         homePage.openHomepage()
-                .clickOnMarathonLink(homePage.marathonLink)
+                .clickOnMarathonLink()
                 .open2021MarathonResults()
                 .checkResultsSortingByPlace();
     }
@@ -19,7 +19,7 @@ public class MarathonResultsTest extends BaseTest {
     @Test
     public void marathonResultsShouldShow51Result() {
         homePage.openHomepage()
-                .clickOnMarathonLink(homePage.marathonLink)
+                .clickOnMarathonLink()
                 .open2021MarathonResults()
                 .checkNumberOfResultsShown();
     }

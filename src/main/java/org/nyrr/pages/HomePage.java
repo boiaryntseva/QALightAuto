@@ -14,14 +14,16 @@ public class HomePage extends ParentPage {
     }
 
     @FindBy(xpath = ".//li//a[@href='/tcsnycmarathon']")
-    public WebElement marathonLink;
+    private WebElement marathonLink;
 
     @FindBy(xpath = ".//*[@data-currentnav-regex='/train']")
-    public WebElement trainingLink;
+    private WebElement trainingLink;
 
     @FindBy(xpath = ".//*[@id='portal']//ul[5]//li[3]")
-    public WebElement groupTrainingLink;
+    private WebElement groupTrainingLink;
 
+    @FindBy(xpath = ".//a[@href='/run/race-calendar'][2]")
+    private WebElement calendarLink;
 
     public HomePage openHomepage() {
         try {
@@ -33,7 +35,7 @@ public class HomePage extends ParentPage {
         return this;
     }
 
-    public MarathonPage clickOnMarathonLink(WebElement marathonLink) {
+    public MarathonPage clickOnMarathonLink() {
 //        marathonLink.click();
 //        logger.info("Marathon link was clicked");
         clickOnElement(marathonLink);
@@ -50,4 +52,8 @@ public class HomePage extends ParentPage {
         return new GroupTrainingPage(webDriver);
     }
 
+    public CalendarPage clickOnCalendarLink() {
+        clickOnElement(calendarLink);
+        return new CalendarPage(webDriver);
+    }
 }

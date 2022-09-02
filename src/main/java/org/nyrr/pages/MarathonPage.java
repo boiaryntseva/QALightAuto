@@ -19,19 +19,19 @@ public class MarathonPage extends ParentPage {
     private WebElement daysCountdown;
 
     @FindBy(xpath = ".//li[@data-dropdown-id='header_dropdown0'][5]//a[@href='#']")
-    public WebElement resultsLink;
+    private WebElement resultsLink;
 
     @FindBy(xpath = ".//li//a[@href='/tcsnycmarathon/results/race-results']")
-    public WebElement raceResultsLink;
+    private WebElement raceResultsLink;
 
 
     @FindBy(xpath = " .//a[@href='https://results.nyrr.org/event/M2021/finishers']")
     //@FindBy(xpath = ".//section[@class='story_detail__text story_detail__text--with_title']//ul[1]//li[1]")
-    public WebElement year2021Results;
+    private WebElement year2021Results;
 
     //@FindBy(xpath = ".//div[@class='cookies__inner']")
     @FindBy(xpath = ".//a[@href='javascript:void(0);']")
-    public WebElement acceptCookies;
+    private WebElement acceptCookies;
 
     public void checkMarathonCountDownDays() throws ParseException {
         String actualDaysCount = daysCountdown.getText().trim();

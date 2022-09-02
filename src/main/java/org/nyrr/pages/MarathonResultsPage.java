@@ -18,10 +18,10 @@ public class MarathonResultsPage extends ParentPage {
     }
 
     @FindBys(@FindBy(xpath = ".//span[text()='Place']//span[@class='num ng-binding']"))
-    List<WebElement> placeNumberList;
+    private List<WebElement> placeNumberList;
 
     @FindAll(@FindBy(xpath = ".//*[@class='container-fluid b-runners_detailes-list']"))
-    List<WebElement> resultRowList;
+    private List<WebElement> resultRowList;
 
 
     public void checkResultsSortingByPlace() {
