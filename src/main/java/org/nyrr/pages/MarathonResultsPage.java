@@ -42,7 +42,7 @@ public class MarathonResultsPage extends ParentPage {
 //        }
 //        Collections.sort(sortedListExpectedInt);
             Assert.assertEquals("Places are not sorted", sortedExpectedList, originalList);
-            logger.info("Places are sorted");
+            logger.info("Places are sorted"); //assert ne obrob cherez try,, catch exception -> pide dali test
     }
 
     public void checkNumberOfResultsShown() {
