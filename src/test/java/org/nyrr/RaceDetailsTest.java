@@ -17,7 +17,10 @@ public class RaceDetailsTest extends BaseTest {
                 .saveRaceDateFromCalendarPage()
                 .clickOnMoreInfoLinkOfRightmostRace()
                 .saveActualRaceDateFromRacePage()
-                .checkRaceLocationIsNotEmpty();
+                .checkRaceLocationIsNotEmpty()
+                .checkHashTagIsNotEmpty()
+                .checkDistanceDetails()
+                .checkRegisterButton();
         Assert.assertEquals(testData.getExpectedRaceDateFromCalendarPage()
                 , testData.getActualRaceDateFromRacePage());
 
